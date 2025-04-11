@@ -19,7 +19,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         });
 
         if (response.ok) {
-            window.location.href = "http://127.0.0.1:5501/index.html"; 
+            window.location.href = "https://natija.vercel.app/"; 
         } else {
             document.getElementById("errorMessage").classList.remove("hidden");
         }

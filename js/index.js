@@ -14,7 +14,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
       const user = users.find(user => user.name === username && user.password === password);
   
       if (user) {
-        window.location.href = "http://127.0.0.1:5501/html/main.html"; 
+        window.location.href = "https://natija.vercel.app/html/main.html"; 
       } else {
       
         document.getElementById("errorMessage").classList.remove("hidden");
