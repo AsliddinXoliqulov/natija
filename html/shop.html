@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="../img/main/favicon.svg"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uzum Market</title>
+    <link rel="stylesheet" href="../css/output.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="text-sm w-full fixed top-0 bg-white z-50">
+      <div
+        class="flex justify-between items-center px-[6%] py-1 bg-gray-100 text-gray-700 text-xs sm:text-sm"
+      >
+        <div class="flex items-center gap-1">
+          <span class="flex items-center gap-2"
+            ><i class="bx bxs-location-plus text-lg"></i>Shahar:
+            <strong>Toshkent</strong></span
+          >
+          <span class="ml-2 hidden lg:inline">Topshirish punktlari</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="hidden md:flex items-center gap-4">
+            <a href="" class="hover:text-purple-600 font-semibold"
+              >Uzumda soting</a
+            >
+            <a href="" class="hover:text-purple-600 font-semibold">
+              Savol-javoblar</a
+            >
+            <a href="" class="hover:text-purple-600 font-semibold">
+              Buyurtmalarim</a
+            >
+          </div>
+          <div class="flex gap-1">
+            <img
+              src="https://flagcdn.com/w40/uz.png"
+              class="w-5 h-5 mr-1 rounded-full"
+              alt=""
+            />
+            <select class="outline-none bg-gray-100" name="" id="">
+              <option value="">
+                <span class="flex items-center"> O'zbekcha </span>
+              </option>
+              <option value="">
+                <span class="flex items-center"> Ruscha </span>
+              </option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex justify-between items-center px-[6%] py-3 relative w-full"
+      >
+        <div class="flex items-center gap-2 mx-2">
+          <button id="menu" class="lg:hidden">
+            <i class="bx bx-menu text-2xl"></i>
+          </button>
+          <a href="./main.html">
+            <img
+              class="w-40 hidden sm:block"
+              src="../img/main/logo.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="hidden lg:flex items-center gap-3 w-full">
+          <button
+            class="bg-purple-100 text-purple-600 px-3 py-1 rounded hidden sm:flex items-center gap-1 font-semibold"
+          >
+            <i class="bx bx-collection text-2xl"></i> Katalog
+          </button>
+          <div
+            class="flex items-center border px-2 py-1 rounded ml-2 w-full mr-5 relative"
+          >
+            <input
+              id="search"
+              type="text"
+              placeholder="Mahsulotlar va turkumlar izlash"
+              class="bg-transparent focus:outline-none w-full p-2 text-sm"
+            />
+            <label
+              class="bg-gray-200 flex items-center justify-center absolute right-0 h-full w-12"
+              for="search"
+              ><i class="bx bx-search-alt-2 text-xl"></i
+            ></label>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="./admin.html" class="flex items-center font-semibold gap-2">
+            <i class="text-xl bx bx-user"></i>Kirish
+          </a>
+          <a
+            href="././like.html"
+            class="flex items-center font-semibold gap-2 relative"
+          >
+            <i class="text-xl bx bx-heart"></i>Like
+            <p
+              id="likes"
+              class="absolute -top-[12px] right-[26px] text-xs h-4 w-4 bg-red-500 flex items-center justify-center text-white rounded-full"
+            >
+              0
+            </p>
+          </a>
+          <a
+            href="./shop.html"
+            class="flex items-center font-semibold gap-2 relative"
+          >
+            <i class="text-xl bx bx-shopping-bag"></i> Savat
+            <p
+              id="shops"
+              class="absolute -top-[12px] right-[35px] text-xs h-4 w-4 bg-red-500 flex items-center justify-center text-white rounded-full"
+            >
+              0
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <nav
+        class="justify-between sm:flex gap-4 pr-[6%] pl-[7%] pb-2 overflow-x-auto scrollbar-hide hidden"
+      >
+        <a
+          href=""
+          class="flex font-bold items-center gap-1 text-sm text-gray-700 whitespace-nowrap"
+        >
+          <img class="h-6 w-6" src="../img/main/sumka.png" alt="" /> Maktab
+          bozori
+        </a>
+        <a
+          href=""
+          class="flex font-bold items-center gap-1 text-sm text-gray-700 whitespace-nowrap"
+        >
+          <img class="h-6 w-6" src="../img/main/foiz.png" /> Yozgi savdo
+        </a>
+        <a
+          href=""
+          class="flex font-bold items-center gap-1 text-sm text-gray-700 whitespace-nowrap"
+        >
+          <img class="h-6 w-6" src="../img/main/bloknot.png" /> Kantselyariya
+        </a>
+        <a
+          href=""
+          class="flex font-bold items-center gap-1 text-sm text-gray-700 whitespace-nowrap"
+        >
+          <img class="h-6 w-6" src="../img/main/nasiya.png" alt="" /> Nasiya
+        </a>
+      </nav>
+
+      <div id="mobile" class="lg:hidden hidden">
+        <div class="flex flex-col bg-white px-4 py-2 gap-5">
+          <a href="./main.html">
+            <img class="w-40" src="../img/main/logo.png" alt="" />
+          </a>
+          <a
+            href=""
+            class="flex hover:text-purple-600 active:text-red-500 font-bold items-center gap-1 text-sm text-gray-700 whitespace-nowrap"
+          >
+            <img class="h-6 w-6" src="../img/main/sumka.png" alt="" /> Maktab
+            bozori
+          </a>
+          <a
+            href=""
+            class="flex hover:text-purple-600 active:text-red-500 font-bold items-center gap-1 text-sm text-gray-700 whitespace-nowrap"
+          >
+            <img class="h-6 w-6" src="../img/main/foiz.png" /> Yozgi savdo
+          </a>
+          <a
+            href=""
+            class="flex hover:text-purple-600 active:text-red-500 font-bold items-center gap-1 text-sm text-gray-700 whitespace-nowrap"
+          >
+            <img class="h-6 w-6" src="../img/main/bloknot.png" /> Kantselyariya
+          </a>
+          <a
+            href=""
+            class="flex hover:text-purple-600 active:text-red-500 font-bold items-center gap-1 text-sm text-gray-700 whitespace-nowrap"
+          >
+            <img class="h-6 w-6" src="../img/main/nasiya.png" alt="" /> Nasiya
+          </a>
+          <a href="" class="hover:text-purple-600 font-semibold"
+            >Uzumda soting</a
+          >
+          <a href="" class="hover:text-purple-600 font-semibold">
+            Savol-javoblar</a
+          >
+          <a href="" class="hover:text-purple-600 font-semibold">
+            Buyurtmalarim</a
+          >
+        </div>
+      </div>
+    </header><p ></p>
+    <div class="h-20 sm:h-40"></div>
+    <div class="p-4 max-w-5xl mx-auto">
+      <h2 class="text-xl text-gray-400 font-semibold mb-4">Savatingiz:</h2>
+
+      <div class="flex flex-col md:flex-row gap-4">
+        <div id="korzinka-wrapper" class="flex-1 space-y-4">
+        </div>
+
+        <div class="w-full md:w-72 border rounded-xl p-4 shadow-sm h-fit">
+          <h3 class="font-semibold mb-2">Buyurtmangiz</h3>
+          <p>
+            Mahsulotlar (<span id="buyurtma-soni">0</span>):
+            <span id="old-narx" class="float-right">0 so'm</span>
+          </p>
+          <p
+            class="text-[#9969fb] text-center my-1 font-bold p-1 border-2 rounded-md border-[#9969fb]"
+          >
+            yetkazib berish: <span>Ertaga</span>
+          </p>
+          <p class="font-medium mt-1">
+            Jami: <span id="jami-narx" class="float-right text-lg">0 so'm</span>
+          </p>
+          <p class="text-green-600 mt-1">
+            Tejovingiz: <span id="tejam" class="float-right">0 so'm</span>
+          </p>
+          <button
+            class="w-full bg-[#9969fb] active:bg-red-400 hover:bg-gray-300 text-white mt-4 py-2 rounded-xl cursor-not-allowed"
+            disabled
+          >
+            Rasmiylashtirishga o‘tish
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text-3xl font-bold text-gray-400 text-center my-10">
+      Tavfsiyalar
+    </h1>
+    <section class="w-[90%] m-auto my-10 h-[420px] overflow-hidden">
+      <div id="cards" class="flex justify-around flex-wrap gap-4"></div>
+      <div>
+        <img class="w-full my-10" src="../img/main/foptercard.png" alt="" />
+      </div>
+    </section>
+
+    <footer class="bg-white py-8 m-auto w-[90%]">
+      <div
+        class="flex items-start justify-around lg:justify-between gap-5 flex-wrap text-center"
+      >
+        <div class="w-40">
+          <h4 class="font-semibold mb-2">Biz haqimizda</h4>
+          <ul class="text-gray-500 space-y-1 text-sm">
+            <li><a href="">Topshirish punktlari</a></li>
+            <li><a href="">Vakansiyalar</a></li>
+          </ul>
+        </div>
+
+        <div class="w-40">
+          <h4 class="font-semibold mb-2">Foydalanuvchilarga</h4>
+          <ul class="text-gray-500 space-y-1 text-sm">
+            <li><a href="">Biz bilan bog‘lanish</a></li>
+            <li><a href="">Savol-Javob</a></li>
+          </ul>
+        </div>
+
+        <div class="w-40">
+          <h4 class="font-semibold mb-2">Tadbirkorlarga</h4>
+          <ul class="text-gray-500 space-y-1 text-sm">
+            <li><a href="">Sotuvchi kabinetiga kirish</a></li>
+          </ul>
+        </div>
+
+        <div class="w-40 flex flex-col items-center">
+          <h4 class="font-semibold mb-2">Ilovani yuklab olish</h4>
+          <div class="flex items-center space-x-3 mb-4">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Google Play"
+              class="h-8"
+            />
+          </div>
+          <p class="font-medium text-sm mb-2">Uzum ijtimoiy tarmoqlarda</p>
+          <div class="flex space-x-3 text-xl">
+            <a href="" class="text-[#E4405F]"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a href="" class="text-[#0088cc]"
+              ><i class="bx bxl-telegram"></i
+            ></a>
+            <a href="" class="text-[#1877F2]"
+              ><i class="bx bxl-facebook"></i
+            ></a>
+            <a href="" class="text-[#FF0000]"><i class="bx bxl-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/shop.js"></script>
+    <script type="module" src="../js/navbar.js"></script>
+    <script type="module" src="../js/like.js"></script>
+  </body>
+</html>
